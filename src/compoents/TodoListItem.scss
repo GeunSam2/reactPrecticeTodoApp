@@ -1,0 +1,41 @@
+.todoListItem {
+    display: grid;
+    grid-template-columns: auto 20px;
+    padding: 10px;
+    vertical-align: middle;
+    transition: 0.3s;
+    .checks {
+        display: grid;
+        grid-template-columns: 20px auto;
+        .checkbox {
+            margin: 0;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .text {
+            margin-left: 10px;
+        }
+        &.checked {
+            background: rgb(146, 217, 250);
+            color: rgb(128, 128, 128);
+        }
+    }
+
+    .delete {
+        width: 20px;
+        height: 20px;
+        color: rgb(98, 3, 3);
+        align-items: center;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    & + & {
+        border-top: 1px solid #8b96b6;
+    }
+
+    &:hover {
+        background: rgb(185, 174, 166);
+    }
+}
